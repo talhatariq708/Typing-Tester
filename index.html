@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Velocity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container floating">
+        <div class="header">
+            <h1 class="title-gradient">Typing Velocity</h1>
+            <div class="controls">
+                <div class="select-wrapper">
+                    <select id="time-select" class="neon-select">
+                        <option value="30">30 Seconds</option>
+                        <option value="60" selected>60 Seconds</option>
+                        <option value="90">90 Seconds</option>
+                    </select>
+                    <i class="fas fa-chevron-down select-arrow"></i>
+                </div>
+                <button id="start-btn" class="neon-button">
+                    <span class="neon-text">Start Challenge</span>
+                    <div class="neon-border"></div>
+                </button>
+            </div>
+        </div>
+
+        <p id="sentence" class="sentence-box"><span id="display-text">Select time and start challenge!</span></p>
+
+        <div id="progress-container" class="progress-glowing">
+            <progress id="typing-progress" value="0" max="100"></progress>
+        </div>
+
+        <textarea id="input-box" class="input-field" disabled placeholder="Start typing here..."></textarea>
+
+        <div class="stats">
+            <div class="stat-box">
+                <i class="fas fa-clock icon"></i>
+                <span id="timer">0</span>s
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-tachometer-alt icon"></i>
+                <span id="wpm">0</span> WPM
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
